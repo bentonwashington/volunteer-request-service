@@ -1,43 +1,48 @@
-const { Profile } = require('../models');
+const { Request, Category, User } = require('../models');
 
 const resolvers = {
-  Query: {
-    profiles: async () => {
-      return Profile.find();
-    },
-
-    profile: async (parent, { profileId }) => {
-      return Profile.findOne({ _id: profileId });
-    },
-  },
-
-  Mutation: {
-    addProfile: async (parent, { name }) => {
-      return Profile.create({ name });
-    },
-    addSkill: async (parent, { profileId, skill }) => {
-      return Profile.findOneAndUpdate(
-        { _id: profileId },
-        {
-          $addToSet: { skills: skill },
+    Query: {
+        requests: async () => {
+            return await Request.find({});
         },
-        {
-          new: true,
-          runValidators: true,
-        }
-      );
+        catrequests: async (parent, args) => {
+            return await Request.findOne({category:args.category});
+        },
+        categories: async () => {
+            return await Category.find({});
+        },
+        user: async (parent, args) => {
+            return await User.findById(args.id);
+        },
     },
-    removeProfile: async (parent, { profileId }) => {
-      return Profile.findOneAndDelete({ _id: profileId });
+
+    Mutation: {
+        addUser: async (parent, { email, username, password}) => {
+            return await User.create({ email, username, password })
+        },
+        updateUser: async (parent, { email }) => {
+            return await User.findOneAndUpdate(
+                { email },
+                {new: true}
+            );
+        },
+        deleteUser: async (parent, {}) => {
+            return await User.findByIdAndDelete({_id: userId})
+        },
+        addRequest: async (parent, { title, description, details }) => {
+            return await Request.create({ title, description, details });
+        },
+        updateRequest: async (parent, { description, details }) => {
+            return await Request.findOneAndUpdate(
+                { description },
+                { details },
+                { new: true }
+            );
+        },
+        deleteRequest: async (parent, {}) => {
+            return await Request.findByIdAndDelete({ _id: requestId})
+        },
     },
-    removeSkill: async (parent, { profileId, skill }) => {
-      return Profile.findOneAndUpdate(
-        { _id: profileId },
-        { $pull: { skills: skill } },
-        { new: true }
-      );
-    },
-  },
-};
+}
 
 module.exports = resolvers;
