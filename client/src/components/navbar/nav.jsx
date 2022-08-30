@@ -5,7 +5,7 @@ import '../../App.css'
 import logo from "../../assets/3.png"
 
 const nav = () => {
-  return (
+  return ( <div> 
     <nav className="navbar  navAdjusts navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div className="container px-4 px-lg-5">
     <img id="logo" src={logo} />
@@ -20,7 +20,7 @@ const nav = () => {
         </div>
     </div>
 </nav>
-  )
-}
+  </div>);
+};
 
-export default nav
+export default nav;
