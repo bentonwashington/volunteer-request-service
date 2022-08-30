@@ -13,8 +13,8 @@ const nav = () => {
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
         <div className="collapse navbar-collapse" id="navbarResponsive">
             <ul className="navbar-nav ml-auto">
-                <li className="nav-item active"><a class="nav-link" href="#!">Home</a></li>
-                <li className="nav-item"><a class="nav-link" href="#!">Citizen Requests</a></li>
+                <li className="nav-item active"><a class="nav-link" href="#!">Citizens Request</a></li>
+                <li className="nav-item"><a class="nav-link" href="#!">Create</a></li>
                 <li className="nav-item"><a class="nav-link" href="#!">My Profile</a></li>
             </ul>
         </div>
