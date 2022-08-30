@@ -1,13 +1,14 @@
 import React from 'react';
 import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
 
+import Nav from './components/navbar/nav'
 import Home from './pages/Home';
 import Header from './components/Header';
 import Footer from './components/Footer';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.scss';
-import Nav from './components/navbar/nav'
+
 
 
 const client = new ApolloClient({
