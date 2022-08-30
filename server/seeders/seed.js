@@ -1,17 +1,28 @@
 const db = require('../config/connection');
-const { Category, Request, User } = require('../models');
+const { Category } = require('../models');
+const { Request } = require('../models');
 
 const categoryData = require('./categoryData.json');
+const requestData = require('./requestData.json');
 
-db.once('open'), async () => {
-// clean database
-await Category.deleteMany({});
+db.once('open', async () => {
 
-// bulk create each model
-const categories = await Category.insertMany(categoryData);
+    try {
+        // clean database
+        await Category.deleteMany({});
+        await Request.deleteMany({});
 
-console.log('all done!');
-process.exit(0);
-} ;
+        // insert data
+        await Category.insertMany(categoryData);
+        await Request.insertMany(requestData);
+
+
+        console.log('all done!');
+        process.exit(0);
+    }   catch (err) {
+        throw err;
+    }
+
+    }) ;
 
 

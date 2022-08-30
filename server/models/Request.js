@@ -12,19 +12,16 @@ const requestSchema = new Schema(
             maxlength: 150,
         },
         details: {
-            type: String,
-            required: true
+            type: String
         },
         createdAt: {
             type: Date, 
             default: Date.now
         },
-        category: [
-            {
+        category: {
                 type: Schema.Types.ObjectId,
                 ref: 'Category'
-            }
-        ],
+            },
     }
 );
 
