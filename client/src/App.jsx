@@ -1,7 +1,7 @@
 import React from 'react';
 import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
 
-// import Nav from './components/navbar/nav'
+import Nav1 from './components/navbar/nav1'
 import Login from './components/Login/login'
 
 import Home from './pages/Home';
@@ -21,8 +21,8 @@ const client = new ApolloClient({
 function App() {
   return (
     <>
-    {/* <Nav/>  */}
-    <Login/> 
+    <Nav1/> 
+    {/* <Login/>  */}
 
     
     
