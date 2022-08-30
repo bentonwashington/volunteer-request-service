@@ -23,8 +23,6 @@ function App() {
     <>
     <Nav1/> 
     {/* <Login/>  */}
-
-    
     
     </>
     

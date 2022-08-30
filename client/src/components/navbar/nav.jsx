@@ -1,6 +1,6 @@
 // rafce
 import React from 'react'
-// import './nav.scss'
+import './nav.scss'
 import '../../App.css'
 import logo from "../../assets/3.png"
 
