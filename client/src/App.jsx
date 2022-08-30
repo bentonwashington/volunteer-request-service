@@ -1,7 +1,9 @@
 import React from 'react';
 import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
 
-import Nav from './components/navbar/nav'
+// import Nav from './components/navbar/nav'
+import Login from './components/Login/login'
+
 import Home from './pages/Home';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -19,7 +21,9 @@ const client = new ApolloClient({
 function App() {
   return (
     <>
-    <Nav/> 
+    {/* <Nav/>  */}
+    <Login/> 
+
     
     
     </>
