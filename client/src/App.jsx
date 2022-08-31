@@ -4,6 +4,7 @@ import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
 import Nav from './components/navbar/nav'
 
 import Login from './components/Login/login'
+import Header from './components/BackgroundStrip/HeaderStrip.js';
 
 // import Home from './pages/Home';
 // import Header from './components/Header';
@@ -23,7 +24,8 @@ function App() {
 <div>
   
   <Nav/>
-  <Login/>   
+  <Header/>   
+  <Login/> 
    
 
   
