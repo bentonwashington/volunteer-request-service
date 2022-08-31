@@ -5,6 +5,7 @@ import Nav from './components/navbar/nav'
 import ProfilePage from './components/ProfilePage/ProfilePage';
 import Login from './components/Login/login'
 import Contact from './components/contact/Contact';
+import Feed from './components/Feed/feed';
 
 // import Home from './pages/Home';
 // import Header from './components/Header';
@@ -27,7 +28,7 @@ function App() {
   <Login/>   
   <ProfilePage/>
   <Contact/>
-   
+  <Feed/>
 
   
 </div>     
