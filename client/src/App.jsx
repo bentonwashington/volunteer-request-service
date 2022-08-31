@@ -5,7 +5,7 @@ import Nav from './components/navbar/nav'
 import Home from './pages/Home';
 import Header from './components/Header';
 import Footer from './components/Footer';
-
+import Feed from './feed/feed'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.scss';
 
@@ -20,7 +20,7 @@ function App() {
   return (
     <>
     <Nav/> 
-    
+    <Feed/>
     
     </>
     
