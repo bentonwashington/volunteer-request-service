@@ -1,5 +1,43 @@
 import { gql } from '@apollo/client';
 
+export const QUERY_ME = gql`
+  query me {
+    me {
+      _id
+      username
+      email
+      requests {
+        _id
+        category
+        title
+        description
+        details
+        createdAt
+        requestAuthor
+      }
+    }
+  }
+`;
+
+export const QUERY_USER = gql`
+  query user($username: String!) {
+    user(username: $username) {
+      _id
+      username
+      email
+      requests {
+        _id
+        category
+        title
+        description
+        details
+        createdAt
+        requestAuthor
+      }
+    }
+  }
+`;
+
 export const QUERY_REQUESTS = gql`
   query getRequests {
     requests {
@@ -9,13 +47,14 @@ export const QUERY_REQUESTS = gql`
       description
       details
       createdAt
+      requestAuthor
     }
   }
 `;
 
 export const QUERY_CATEGORY_REQUESTS = gql`
-  query getRequests($category: ID!) {
-    requests(category: $category) {
+  query catrequests($category: ID!) {
+    catrequests(category: $category) {
       _id
       category
       title
@@ -34,12 +73,3 @@ export const QUERY_CATEGORIES = gql`
   }
 }
 `
-
-export const QUERY_SINGLE_USER = gql`
-  query getSingleUser($userId: ID!) {
-    user(userId: $userId) {
-      email
-      username
-      password
-    }
-  }`

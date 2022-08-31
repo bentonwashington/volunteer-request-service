@@ -1,4 +1,5 @@
 const { Schema, model } = require('mongoose');
+const dateFormat = require('../utils/dateFormat');
 
 const requestSchema = new Schema(
     {
@@ -14,6 +15,11 @@ const requestSchema = new Schema(
         details: {
             type: String
         },
+        requestAuthor: {
+            type: String,
+            required: true,
+            trim: true
+        },
         createdAt: {
             type: Date, 
             default: Date.now,
@@ -21,7 +27,8 @@ const requestSchema = new Schema(
         },
         category: {
                 type: Schema.Types.ObjectId,
-                ref: 'Category'
+                ref: 'Category',
+                required: true
             },
     }
 );
