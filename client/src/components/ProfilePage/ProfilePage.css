@@ -1,11 +1,13 @@
-.portfolio_container {
+
+.profile_container {
     display:grid;
     grid-template-columns: repeat(1fr);
     gap: 2.5rem;
+    width: 40%;
 }
 
-.portfolio_item {
-    background: var(--bs-dark);
+.profile_item {
+    background: var(--bs-secondary);
     padding: 1.2rem;
     border-radius: 2rem;
     border: 1px solid transparent;
@@ -13,22 +15,28 @@
     text-align: center;
 }
 
-.portfolio_item:hover {
-    border-color: var(--bs-gray-700);
+.profile_item:hover {
+    border-color: var(--bs-gray-900);
     background: transparent;
+    background-color: var(--bs-gray-700);
 }
 
-.portfolio_item h3 {
+.profile_item h3 {
     margin: 1.2rem 0 2rem;
+    color: aliceblue;
 }
 
 
-.portfolio_itemHolder {
+.profile_itemHolder {
     display: flex;
     gap: 1rem;
     margin-bottom: 1rem;
     justify-content: center;
   
+}
+
+.profile_itemHolder a {
+    color: aliceblue;
 }
 
 
