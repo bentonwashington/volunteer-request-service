@@ -1,0 +1,22 @@
+[
+    {
+        "username": "benton",
+        "email": "benton@heroio.com",
+        "password": "password01"
+    },
+    {
+        "username": "paulo",
+        "email": "paulo@heroio.com",
+        "password": "password02"
+    },
+    {
+        "username": "j",
+        "email": "j@heroio.com",
+        "password": "password03"
+    },
+    {
+        "username": "nashbi",
+        "email": "nashbi@heroio.com",
+        "password": "password04"
+    }
+]
