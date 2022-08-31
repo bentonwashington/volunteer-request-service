@@ -19,20 +19,25 @@ const userSchema = new Schema({
     required: true,
     minlength: 5,
   },
+  requests: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: "Request"
+    }]
 });
 
 userSchema.pre('save', async function (next) {
-    if (this.isNew || this.isModified('password')) {
-      this.password = await bcrypt.hash(this.password);
-    }
-  
-    next();
-  });
+  if (this.isNew || this.isModified('password')) {
+    this.password = await bcrypt.hash(this.password);
+  }
+
+  next();
+});
 
 userSchema.methods.isCorrectPassword = async function (password) {
-    return bcrypt.compare(password, this.password);
-  };
-  
-  const User = model('User', userSchema);
-  
-  module.exports = User;
+  return bcrypt.compare(password, this.password);
+};
+
+const User = model('User', userSchema);
+
+module.exports = User;
