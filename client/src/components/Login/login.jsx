@@ -1,38 +1,26 @@
 import React from 'react'
 import '../../App.css'
-
+import '../Login/login.css'
 
 const Login = () => {
         return (
-          <div> 
-            <form>
-                <h3>Register</h3>
-
-                <div className="form-group">
-                    <label>First name</label>
-                    <input type="text" className="form-control" placeholder="First name" />
-                </div>
-
-                <div className="form-group">
-                    <label>Last name</label>
-                    <input type="text" className="form-control" placeholder="Last name" />
-                </div>
-
-                <div className="form-group">
-                    <label>Email</label>
-                    <input type="email" className="form-control" placeholder="Enter email" />
-                </div>
-
-                <div className="form-group">
-                    <label>Password</label>
-                    <input type="password" className="form-control" placeholder="Enter password" />
-                </div>
-
-                <button type="submit" className="btn btn-dark btn-lg btn-block">Register</button>
-                <p className="forgot-password text-right">
-                    Already registered <a href="#">log in?</a>
-                </p>
-            </form>
+          <div className='container'> 
+    <form id='shapeUp'>
+           <div class="mb-3">
+           <label for="exampleInputEmail1" class="form-label">Email address</label>
+           <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/>
+           <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Password</label>
+        <input type="password" class="form-control" id="exampleInputPassword1"/>
+      </div>
+             <div class="mb-3 form-check">
+             <input type="checkbox" class="form-check-input" id="exampleCheck1"/>
+             <label class="form-check-label" for="exampleCheck1">Check me out</label>
+      </div>
+             <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
           </div>
         );
     };

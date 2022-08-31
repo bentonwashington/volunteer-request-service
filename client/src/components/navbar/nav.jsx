@@ -17,6 +17,7 @@ const nav = () => {
             <ul className="navbar-nav ml-auto">
                 <li className="nav-item active"><a class="nav-link" href="#!">Citizens Request</a></li>
                 <li className="nav-item"><a class="nav-link" href="#!">Create</a></li>
+                <li className="nav-item"><a class="nav-link" href="#!">Login</a></li>
                 <li className="nav-item"><a class="nav-link" href="#!">My Profile</a></li>
             </ul>
         </div>
