@@ -2,7 +2,7 @@ import React from 'react';
 import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
 
 import Nav from './components/navbar/nav'
-
+import ProfilePage from './components/ProfilePage/ProfilePage';
 import Login from './components/Login/login'
 
 // import Home from './pages/Home';
@@ -24,6 +24,7 @@ function App() {
   
   <Nav/>
   <Login/>   
+  <ProfilePage/>
    
 
   
