@@ -4,6 +4,7 @@ import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
 import Nav from './components/navbar/nav'
 import ProfilePage from './components/ProfilePage/ProfilePage';
 import Login from './components/Login/login'
+import Contact from './components/contact/Contact';
 
 // import Home from './pages/Home';
 // import Header from './components/Header';
@@ -25,6 +26,7 @@ function App() {
   <Nav/>
   <Login/>   
   <ProfilePage/>
+  <Contact/>
    
 
   
