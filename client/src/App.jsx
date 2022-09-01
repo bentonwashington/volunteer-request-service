@@ -4,8 +4,9 @@ import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
 import Nav from './components/navbar/nav'
 import ProfilePage from './components/ProfilePage/ProfilePage';
 import Login from './components/Login/login'
+import SignUp from './components/SignUp/signUp.js'
 import Contact from './components/contact/Contact';
-import Feed from './components/Feed/feed';
+import Feed from './components/Feed/feed.jsx';
 
 // import Home from './pages/Home';
 // import Header from './components/Header';
@@ -25,11 +26,11 @@ function App() {
 <div>
   
   <Nav/>
-  <Login/>   
+  <Login/>  
+  <Feed/>  
   <ProfilePage/>
   <Contact/>
-  <Feed/>
-
+  <SignUp/>
   
 </div>     
     
@@ -37,3 +38,4 @@ function App() {
 }
 
 export default App;
+

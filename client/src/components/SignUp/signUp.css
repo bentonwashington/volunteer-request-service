@@ -1,0 +1,20 @@
+#Shaping {
+    margin-top: 25%;
+    margin-bottom: 25%;
+    font-family: Play;
+    /* border-style: inset; */
+    /* border-width: 100%; */
+
+    
+
+}
+
+#Welcomed {
+    text-align: center;
+    margin-bottom: 5%;
+    font-family: Play;
+}
+
+.btn {
+    background-color: rgb(7, 7, 122);
+}
